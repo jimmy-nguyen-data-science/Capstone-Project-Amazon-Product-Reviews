@@ -1,1 +1,1 @@
-# Capstone-Project-COVID19-Vaccinations-
+# Capstone-Project-COVID19-Vaccinations
