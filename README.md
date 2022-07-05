@@ -1,6 +1,11 @@
 # Capstone-Project-COVID19-Vaccinations
 
 
+# Collaborators 
+
+- [Jimmy Nguyen](https://github.com/jimmy-nguyen-data-science)
+- [Juliet Sielnad-Harris]()
+
 ## Purpose
 The purpose of this project is to study the presence of menstrual cycle irregularities before and
 after COVID-19 vaccination. A focus on intermenstrual bleeding, commonly referred to as
