@@ -4,7 +4,7 @@
 # Collaborators 
 
 - [Jimmy Nguyen](https://github.com/jimmy-nguyen-data-science)
-- [Juliet Sielnad-Harris]()
+- Juliet Sieland-Harris
 
 ## Purpose
 The purpose of this project is to study the presence of menstrual cycle irregularities before and
