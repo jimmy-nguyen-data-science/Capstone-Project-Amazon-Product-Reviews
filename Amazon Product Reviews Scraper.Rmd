@@ -1,0 +1,74 @@
+---
+title: "Amazon Product Reviews Scraper"
+author: "Jimmy Nguyen"
+date: "07/07/2022"
+output: 
+  html_document:
+    toc: yes
+    toc_depth: '5'
+    df_print: paged
+---
+
+```{r}
+library(pacman)
+pacman::p_load(RCurl, XML, dplyr, rvest, purrr)
+```
+
+```{r}
+# Specify number of pages - can only scrape 10 rows per page (right now its 2000 pages)
+page_num <- 2000
+# url <- "https://www.amazon.com/Google-GA00439-US-Chromecast-3rd-Generation/product-reviews/B015UKRNGS/ref=cm_cr_arp_d_viewopt_srt?ie=UTF8&reviewerType=avp_only_reviews&pageNumber="
+url <- "https://www.amazon.com/Google-GA00439-US-Chromecast-3rd-Generation/product-reviews/B015UKRNGS/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews&pageNumber="
+url_reviews <- paste0(url, page_num)
+
+```
+
+
+```{r}
+amz_reviews_scraper <- function(page_num, url) {
+  # read url and each page as html
+  doc <- read_html(url_reviews)
+
+  # parse the content
+  map_dfr(doc %>% html_elements("[id^='customer_review']"), ~ data.frame(
+    review_title = .x %>% html_element(".review-title") %>% html_text2(),
+    review_text = .x %>% html_element(".review-text-content") %>% html_text2(),
+    review_star = .x %>% html_element(".review-rating") %>% html_text2(),
+    date = .x %>% html_element(".review-date") %>% html_text2() %>% gsub(".*vom ", "", .),
+    author = .x %>% html_element(".a-profile-name") %>% html_text2(),
+    page = page_num
+  )) %>%
+    # return as table
+    as_tibble %>%
+    return()
+}
+
+```
+
+
+
+```{r}
+
+# create data frame and append each review to the same data frame
+df_total <- data.frame()
+
+# specify the number of pages here
+for (x in 1:page_num) {
+  each_page <- amz_reviews_scraper(page_num = x, url = url)
+  df <- data.frame(each_page)
+  df_total <- rbind(df_total, df)
+}
+
+# export to csv - make sure to specify the file name 
+write.csv(df_total, "google_chromecast.csv", row.names = FALSE)
+
+# view data frame
+df_total
+
+```
+
+
+
+
+
+
