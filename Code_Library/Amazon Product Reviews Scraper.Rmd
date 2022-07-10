@@ -1,6 +1,6 @@
 ---
 title: "Amazon Product Reviews Scraper"
-author: "Jimmy Nguyen"
+author: "Jimmy Nguyen and Juliet Sieland-Harris"
 date: "07/07/2022"
 output:
   pdf_document:
