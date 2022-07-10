@@ -4,7 +4,7 @@
 # Collaborators 
 
 - [Jimmy Nguyen](https://github.com/jimmy-nguyen-data-science)
-- Juliet Sieland-Harris
+- [Juliet Sieland-Harris](https://github.com/JSielandHarris)
 
 # Purpose
 
