@@ -1,16 +1,31 @@
+from typing_extensions import final
 import joblib
 import pandas as pd # pandas package
 
 import numpy as np # numpy package
 
+# matplotlib packages
+import matplotlib
+import matplotlib.pyplot as plt 
+plt.rcParams['axes.facecolor'] = 'black'
+plt.rcParams['figure.figsize'] = (36.0, 20.0)
+
 import seaborn as sns # seaborn package
-# dictionary package
-from collections import Counter, defaultdict
+
+# plotly packages
+from chart_studio import plotly
+import plotly.express as px
+import plotly.graph_objs as go
+import plotly.figure_factory as ff
+from plotly.offline import iplot
+
 
 import warnings  # warnings package
 warnings.filterwarnings('ignore')
 
-from pathlib import Path # path package
+# dictionary package
+from collections import Counter, defaultdict
+
 import re #regex package
 from textblob import TextBlob #import textblob package
 
@@ -37,6 +52,7 @@ import joblib
 
 #stream lit
 import streamlit as st
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # ------------------------------------------------------
 
@@ -157,6 +173,7 @@ def prepare(text, pipeline) :
 pipeline = [str.lower, decontracted, remove_punctuation, tokenize, remove_whitespace_token, remove_stop]
 
 
+
 ## Load tfidf model for new data later on
 tfidf = joblib.load("tfidf.pkl")
 
@@ -165,13 +182,29 @@ final_model = joblib.load("final_model.pkl")
 
 
 # stream lit
-st.subheader('Single Review Sentiment Classification')
-review_input = st.text_input('Amazon Review: ')
+st.title("Sentiment Analysis for Streaming Devices on Amazon")
+with st.form("key1"):
+    # ask for input
+    review_input = st.text_area('Enter review here: ')
+    button_check = st.form_submit_button("Submit")
+
 
 if review_input != '':
 
     # Pre-process amazon review
     review =  pd.DataFrame([review_input], columns=['review_text'])
+    
+    # Start with one review:
+    text = review.review_text[0]
+    
+    # Create and generate a word cloud image:
+    wordcloud = WordCloud(stopwords=sw, colormap = 'RdYlGn').generate(text)
+
+    # Display the generated image:
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.axis("off")
+    st.pyplot()
+
     review['clean_reviews'] = review['review_text'].apply(prepare,pipeline= pipeline)
     
     # remove any unicode characters
@@ -187,8 +220,16 @@ if review_input != '':
 
     # Make predictions
     with st.spinner('Predicting...'):
-        final_model.predict(review_input)
+        review_pred = final_model.predict(review_input)[0]
         
-    st.write('Prediction:')
-    st.write(pd.DataFrame(np.round(final_model.predict_proba(review_input),3),\
-             columns=final_model.classes_))
+    # Show predictions
+    st.subheader('Prediction: '+ review_pred)
+    pred_prob = np.round(final_model.predict_proba(review_input),3).ravel().tolist()
+    pred_prob_df = pd.DataFrame({'Likelihood':pred_prob, 'Sentiment': final_model.classes_})
+
+   # use plotly to create a bar graph of number of reviews by brand and using customized color coding 
+    fig = px.bar(pred_prob_df, x="Sentiment", y="Likelihood", color="Sentiment", 
+             title= "Likelihood of Predicted Sentiment",
+             color_discrete_map={'Negative':'red',  'Positive':'rgb(27,158,119)'})
+    fig.update_layout(autosize=False, width=800, height=600)
+    st.plotly_chart(fig)
