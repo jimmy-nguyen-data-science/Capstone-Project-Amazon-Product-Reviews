@@ -178,7 +178,7 @@ pipeline = [str.lower, decontracted, remove_punctuation, tokenize, remove_whites
 tfidf = joblib.load("tfidf.pkl")
 
 # Load final model
-final_model = joblib.load("final_svm_model.pkl")
+final_model = joblib.load("final_model.pkl")
 
 
 # stream lit
