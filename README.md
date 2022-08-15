@@ -1,4 +1,4 @@
-# Amazon Customer Reviews Analysis Based on Streaming Devices in 2022
+# ADS 509: Amazon Customer Reviews Sentiment Analysis Based on Streaming Devices
 
 
 # Collaborators 
