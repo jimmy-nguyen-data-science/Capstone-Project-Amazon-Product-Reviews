@@ -28,6 +28,12 @@ purchases. The convenience of ordering an itemto ship directly to the consumer w
 reviews, determining customer sentiment can be a challenge. A machine learning model trained on customer reviews can alleviate this challenge by efficiently classifying the sentiment of large-scale reviews. With data scraped from the Amazon shopping website for four different streaming
 devices, the objective of this research is to obtain a machine learning model with high accuracy, precision, and recall. Different sampling techniques balance the dominant positive class of reviews. The final model was a hyper-tuned support vector machine model and deployed in the open-source application framework, Streamlit.
 
+
+![live demo part 1](https://github.com/jimmy-nguyen-data-science/Capstone-Project-Amazon-Product-Reviews/blob/main/Image/live%20demo.PNG)
+![live demo part 2](https://github.com/jimmy-nguyen-data-science/Capstone-Project-Amazon-Product-Reviews/blob/main/Image/live%20demo%20part%202.PNG)
+![live demo part 3](https://github.com/jimmy-nguyen-data-science/Capstone-Project-Amazon-Product-Reviews/blob/main/Image/live%20demo%20part%203.PNG)
+
+
 # Data Science Objectives
 
 The data science objective is to provide an in-depth analysis on streaming devices in 2022. This includes insights from sentiment analysis where we can monitor trends and observe overall opinion towards the brand and product.  We will aim to achieve the highest accuracy score as the performance metric and deploy it as a web-application where it can classifiy positive or negative ratings based on the user’s review.
