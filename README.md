@@ -33,6 +33,22 @@ devices, the objective of this research is to obtain a machine learning model wi
 The data science objective is to provide an in-depth analysis on streaming devices in 2022. This includes insights from sentiment analysis where we can monitor trends and observe overall opinion towards the brand and product.  We will aim to achieve the highest accuracy score as the performance metric and deploy it as a web-application where it can classifiy positive or negative ratings based on the user’s review.
 
 
+# Methodology
+
+- Problem statement and justification for the proposed approach
+- EDA (graphical and non-graphical representations of relationships between the response variable and predictor variables)
+- Data wrangling and pre-processing (handling of missing values, tokenization, removing stopwords, etc.)
+- Data splitting (training, test sets, over-sampling vs. under-sampling techniques)
+- Model strategies (Baseline/Dummy Classifier, SVM, and Random Forest)
+- Validation and testing (model tuning and evaluation)
+- Results and final model selection (performance measures, etc.)
+- Discussion and conclusions (address the problem statement and suggestions that could go beyond the scope of the project.)
+
+## Technologies
+- Python, R, 
+- Microsoft Powerpoint
+- Microsoft Word
+
 # Conclusion
 
 Overall, the final model using the SVM algorithm with its tuned hyper-parameters on the one-sided selection sampling data performs the best with the highest accuracy of 94.69%, whereas its baseline criteria were 88.93%. The reasoning behind this performance metric selection is due to the balanced weights of positive and negative
