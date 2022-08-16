@@ -44,7 +44,13 @@ The data science objective is to provide an in-depth analysis on streaming devic
 - Results and final model selection (performance measures, etc.)
 - Discussion and conclusions (address the problem statement and suggestions that could go beyond the scope of the project.)
 
-## Technologies
+# Data Visualization 
+
+![Product and Product Ratings](https://github.com/jimmy-nguyen-data-science/Capstone-Project-Amazon-Product-Reviews/blob/main/Image/star%20ratings%20by%20product.png)
+![Bi-gram Word Cloud](https://github.com/jimmy-nguyen-data-science/Capstone-Project-Amazon-Product-Reviews/blob/main/Image/word%20cloud%20-%20top%20100%20bigrams.PNG)
+
+
+# Technologies
 - Python, R, 
 - Microsoft Powerpoint
 - Microsoft Word
