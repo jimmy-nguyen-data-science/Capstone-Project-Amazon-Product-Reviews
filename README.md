@@ -67,6 +67,9 @@ Overall, the final model using the SVM algorithm with its tuned hyper-parameters
 reviews equally. For validation, an unseen sample from a negative review is selected for testing each model. The SVM model classifies the review accurately with a probability of 98.9% negative, but the random forest model classifies it incorrectly with 53.5% positive and 46.5% negative. Due to this result, only the SVM model
 is considered the final model for deployment.
 
+![Performance table](https://github.com/jimmy-nguyen-data-science/Capstone-Project-Amazon-Product-Reviews/blob/jimmynguyen/Image/performance%20table.PNG)
+![Performance Accuracy Comparison](https://github.com/jimmy-nguyen-data-science/Capstone-Project-Amazon-Product-Reviews/blob/jimmynguyen/Image/performance%20comparison.PNG)
+
 
 # Next Steps
 
