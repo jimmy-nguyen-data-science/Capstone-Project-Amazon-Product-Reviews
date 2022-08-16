@@ -34,14 +34,20 @@ ratings from the neutral class too. Thus, expanding into a multi-class classific
 
 Fernández, A., García, S., Galar, M., Prati, R. C., Krawczyk, B., & Herrera, F. (2018). Learning from imbalanced data sets (1st ed.). Springer. 1–6. 
   https://doi.org/10.1109/ICIRD.2018.8376299 
+  
 Haque, T. U., Saber, N. N, & Shah, F. M. (2018). Sentiment analysis on large-scale Amazon product reviews. 2018 IEEE International Conference on Innovative Research     and Development (ICIRD), Bangkok, Thailand, 1–6. https://doi.org/10.1109/ICIRD.2018.8376299 
+
 Kokje, R. C., & Chouhan, G. S. (2020). A supervised learning technique for classifying Amazon product reviews based on buyers sentiments. International Journal of       Computer Applications, 175(38), 36–41. https://doi.org/10.5120/ijca2020920956        
+
 Rathor, A. S., Agarwal, A., & Dimri, P. (2018). Comparative study of machine learning approaches for Amazon reviews. Procedia Computer Science, 132, 1552–1561.       
   https://doi.org/10.1016/j.procs.2018.05.119 
+  
 Shrestha, N., & Nasoz, F. (2019). Deep learning sentiment analysis of Amazon.com reviews and ratings. International Journal on Soft Computing, Artificial Intelligence 
   and Applications, 8(1), 01–15. https://doi.org/10.5121/ijscai.2019.8101 
+  
 Srujan, K. S., Nikhil, S. S., Raghav Rao, H.,  Karthik, K., Harish, B. S., & Keerthi Kumar, H. M. (2018). Classification of Amazon book reviews based on sentiment 
   analysis. Information Systems Design and Intelligent Applications, 401–411. https://doi.org/10.1007/978-981-10-7512-4_40  
+  
 Wang, K., Tian, J., Zheng, C., Yang, H., Ren, J., Li, C., Han, Q., & Zhang, Y. (2021). Improving risk identification of adverse outcomes in chronic heart failure    
   using SMOTE+ENN and machine learning. Risk Management Healthcare Policy, 2021(14), 2453–2463. https://doi.org/10.2147/RMHP.S310295 
 
