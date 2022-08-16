@@ -6,6 +6,21 @@
 - [Jimmy Nguyen](https://github.com/jimmy-nguyen-data-science)
 - [Juliet Sieland-Harris](https://github.com/JSielandHarris)
 
+# Installation
+
+
+To clone this repository onto your device, use the commands below:
+
+	1. git init
+	2. git clone https://github.com/jimmy-nguyen-data-science/Capstone-Project-Amazon-Product-Reviews.git
+
+### Dependencies
+
+To download the required packages as a local environment, please do the following:
+
+ 	1. pip install -r requirements.txt
+
+
 # Background and Purpose 
 
 As society continues to progress digitally, consumers are increasingly relying on e-commerce shopping websites to make
