@@ -31,7 +31,7 @@ devices, the objective of this research is to obtain a machine learning model wi
 
 ![live demo part 1](https://github.com/jimmy-nguyen-data-science/Capstone-Project-Amazon-Product-Reviews/blob/main/Image/live%20demo.PNG)
 ![live demo part 2](https://github.com/jimmy-nguyen-data-science/Capstone-Project-Amazon-Product-Reviews/blob/main/Image/live%20demo%20part%202.PNG)
-![live demo part 3](https://github.com/jimmy-nguyen-data-science/Capstone-Project-Amazon-Product-Reviews/blob/main/Image/live%20demo%20part%203.PNG)
+![live demo part 3](https://github.com/jimmy-nguyen-data-science/Capstone-Project-Amazon-Product-Reviews/blob/jimmynguyen/Image/live%20demo%20part%203.PNG)
 
 
 # Data Science Objectives
